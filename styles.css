@@ -66,6 +66,7 @@ button {
   outline: none;
   border-radius: 0px 15px 15px 0px;
   cursor: pointer;
+  width: 3.625rem;
 }
 
 button:hover {
@@ -94,6 +95,7 @@ button:hover {
   margin-bottom: 1.5rem;
   font-size: 1.25rem;
   font-weight: 500;
+  color: var(--Very-Dark-Gray);
 }
 
 .attribution {
