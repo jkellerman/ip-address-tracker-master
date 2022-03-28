@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h1>IP Address Tracker</h1>
+        <div class="search__bar">
+          <label for="search">
+            <input
+              type="text"
+              placeholder="Search for any IP address or domain"
+            />
+          </label>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="3"
+                d="M2 1l6 6-6 6"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="main__container">
+        <div class="info_container">
+          <div class="info_header">IP Address</div>
+          <div class="info">192.212.174.101</div>
+        </div>
+        <div class="info_container">
+          <div class="info_header">Location</div>
+          <div class="info">Brooklyn, NY 10001</div>
+        </div>
+        <div class="info_container">
+          <div class="info_header">Timezone</div>
+          <div class="info">UTC-05:00</div>
+        </div>
+        <div class="info_container">
+          <div class="info_header">ISP</div>
+          <div class="info">SpaceX Starlink</div>
+        </div>
+      </div>
+      <div class="map"></div>
+    </main>
+
+    <!-- add offset value dynamically using the API -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
+</html>
