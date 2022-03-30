@@ -1,10 +1,10 @@
-const url = "https://geo.ipify.org/api/v2/country?apiKey=";
+const url = "https://geo.ipify.org/api/v2/country,city?apiKey=";
 const geoApiKey = "at_bfYP0ALvxe1bi1y15ZvlujMFc84Ap";
 const button = document.querySelector("button");
 const input = document.querySelector("#search");
 
-const getIP = async (domain, input) => {
-  const endPoint = `${url}${geoApiKey}${domain}${input}`;
+const getIP = async (param, input) => {
+  const endPoint = `${url}${geoApiKey}${param}${input}`;
   const response = await fetch(endPoint);
   const jsonResponse = await response.json();
   if (response.ok) {
