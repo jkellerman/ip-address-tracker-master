@@ -85,6 +85,7 @@ main {
   border-radius: 15px;
   background: #fff;
   padding: 1.625rem;
+  padding-bottom: 0;
   position: absolute;
   top: 22.5%;
   left: 5%;
