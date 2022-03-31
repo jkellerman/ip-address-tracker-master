@@ -8,6 +8,7 @@ const getIP = async (param, input) => {
   const response = await fetch(endPoint);
   const jsonResponse = await response.json();
   if (response.ok) {
+    console.log(jsonResponse);
     let ipAddress = (document.querySelector(".ip__address").innerText =
       jsonResponse.ip);
     let location = (document.querySelector(
@@ -17,6 +18,24 @@ const getIP = async (param, input) => {
       ".timezone"
     ).innerText = `UTC${jsonResponse.location.timezone}`);
     let isp = (document.querySelector(".isp").innerText = jsonResponse.isp);
+    let latitude = jsonResponse.location.lat;
+    let longitute = jsonResponse.location.lng;
+    const map = L.map("map").setView([latitude, longitute], 15);
+    L.tileLayer(
+      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+      {
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: "mapbox/streets-v11",
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken:
+          "pk.eyJ1IjoiamtlbGwiLCJhIjoiY2t3N3JlNmFzMWVnYjJxbWVxNGR5cXh4MSJ9.CCiBpULqHcrdq2fXBv7qog",
+      }
+    ).addTo(map);
+
+    const marker = L.marker([latitude, longitute]).addTo(map);
   }
 };
 
@@ -28,15 +47,3 @@ button.addEventListener("click", () => {
     getIP("&domain=", newInput);
   }
 });
-
-var map = L.map("map").setView([51.505, -0.09], 13);
-
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
-
-L.marker([51.5, -0.09])
-  .addTo(map)
-  .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
-  .openPopup();
