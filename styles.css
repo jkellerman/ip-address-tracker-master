@@ -74,14 +74,20 @@ button:hover {
   transition: 0.2s ease-in-out;
 }
 
+main {
+  position: relative;
+}
+
 .main__container {
   width: 90%;
   margin: 0 auto;
   text-align: center;
   border-radius: 15px;
   background: #fff;
-  margin-top: -8rem;
   padding: 1.625rem;
+  position: absolute;
+  top: 30%;
+  left: 5%;
 }
 
 .info__header {
@@ -96,6 +102,10 @@ button:hover {
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--Very-Dark-Gray);
+}
+
+#map {
+  height: 300px;
 }
 
 .attribution {

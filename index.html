@@ -26,6 +26,7 @@
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""
+      defer
     ></script>
     <script src="script.js" defer></script>
     <title>Frontend Mentor | IP Address Tracker</title>
@@ -54,6 +55,8 @@
           </button>
         </div>
       </div>
+      <div id="map"></div>
+
       <div class="main__container">
         <div class="info_container">
           <div class="info__header">IP Address</div>
@@ -72,7 +75,6 @@
           <div class="info isp"></div>
         </div>
       </div>
-      <div id="map"></div>
     </main>
 
     <!-- add offset value dynamically using the API -->
