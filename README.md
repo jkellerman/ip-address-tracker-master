@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/jkellerman/ip-address-tracker-master)
-- Live Site URL: [Live Site](https://jkellerman.github.io/ip-address-tracker-master/m)
+- Live Site URL: [Live Site](https://jkellerman.github.io/ip-address-tracker-master/)
 
 ## My process
 
