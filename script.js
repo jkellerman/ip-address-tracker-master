@@ -3,7 +3,9 @@ const geoApiKey = "at_bfYP0ALvxe1bi1y15ZvlujMFc84Ap";
 const button = document.querySelector("button");
 const input = document.querySelector("#search");
 
-let map = L.map("map").setView([51.505, -0.09], 15);
+let map = L.map("map", {
+  zoomControl: false,
+}).setView([51.505, -0.09], 15);
 L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
   {
@@ -20,9 +22,8 @@ L.tileLayer(
 
 let myIcon = L.icon({
   iconUrl: "images/icon-location.svg",
-  iconSize: [38, 95],
-  iconAnchor: [22, 94],
-  popupAnchor: [-3, -76],
+  iconSize: [46, 56],
+  iconAnchor: [22, 9],
 });
 
 L.marker([51.505, -0.09], { icon: myIcon }).addTo(map);
@@ -46,7 +47,9 @@ const getIP = async (param, input) => {
     let isp = (document.querySelector(".isp").innerText = jsonResponse.isp);
 
     // add map
-    map = L.map("map").setView([latitude, longitute], 15);
+    map = L.map("map", {
+      zoomControl: false,
+    }).setView([latitude, longitute], 17);
     L.tileLayer(
       "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
       {
@@ -64,7 +67,7 @@ const getIP = async (param, input) => {
     let myIcon = L.icon({
       iconUrl: "images/icon-location.svg",
       iconSize: [46, 56],
-      iconAnchor: [23, 45],
+      iconAnchor: [22, 9],
     });
 
     L.marker([latitude, longitute], { icon: myIcon }).addTo(map);
