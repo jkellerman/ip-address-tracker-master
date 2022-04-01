@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jkellerman/ip-address-tracker-master)
-- Live Site URL: [Add live site URL here](https://jkellerman.github.io/ip-address-tracker-master/)
+- Solution URL: [Solution](https://github.com/jkellerman/ip-address-tracker-master)
+- Live Site URL: [Live Site](https://jkellerman.github.io/ip-address-tracker-master/m)
 
 ## My process
 
@@ -50,4 +50,4 @@ This is the first project where I have used two APIs in one project. I learned h
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/jkellerman)
+- Frontend Mentor - [jkellerman](https://www.frontendmentor.io/profile/jkellerman)
