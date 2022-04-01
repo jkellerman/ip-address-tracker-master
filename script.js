@@ -18,7 +18,14 @@ L.tileLayer(
   }
 ).addTo(map);
 
-let marker = L.marker([51.505, -0.09]).addTo(map);
+let myIcon = L.icon({
+  iconUrl: "images/icon-location.svg",
+  iconSize: [38, 95],
+  iconAnchor: [22, 94],
+  popupAnchor: [-3, -76],
+});
+
+L.marker([51.505, -0.09], { icon: myIcon }).addTo(map);
 
 const getIP = async (param, input) => {
   map.remove();
@@ -54,7 +61,13 @@ const getIP = async (param, input) => {
       }
     ).addTo(map);
 
-    let marker = L.marker([latitude, longitute]).addTo(map);
+    let myIcon = L.icon({
+      iconUrl: "images/icon-location.svg",
+      iconSize: [46, 56],
+      iconAnchor: [23, 45],
+    });
+
+    L.marker([latitude, longitute], { icon: myIcon }).addTo(map);
   }
 };
 
